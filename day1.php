@@ -1,68 +1,67 @@
-
 <?php
 
-echo "Wellcome To php";
-echo "<br>";
-print "Wellcome To php";
-/Number 2/
- $x = 5;
- $y ="Welcome";
- $z = true;
- echo $x;
- echo "<br>";
-echo $y;
-echo "<br>";
- echo $z;
- echo "<br>";
+echo "Welcome to PHP<br>";
+print("Welcome to PHP<br>");
 
- echo "x is : " . gettype($x);
- echo "<br>";
- echo "y is : " . gettype($y);
-echo "<br>";
-echo "z is : " . gettype($z);
-/Number 4/
- $i = 0;
- for( $i = 0; $i <= 15; $i++ ){
-    echo $i;
-    echo "<br>";
+$x = 5;
+$y = 'Welcome ';
+$z = true;
+
+echo "$y<br>$x<br>$z<br>";
+
+echo "Type of x: " . gettype($x) . "<br>";
+echo "Type of y: " . gettype($y) . "<br>";
+echo "Type of z: " . gettype($z) . "<br>";
+
+echo "Numbers using for loop: ";
+for ($i = 0; $i <= 15; $i++) {
+    echo "$i ";
 }
- while($i <= 15 ){
-    echo $i;
-   echo "<br>";
-    $i ++ ;
+echo "<br>";
+echo "Numbers using while loop: ";
+$i = 0;
+while ($i <= 15) {
+    echo "$i ";
+    $i++;
+}
+echo "<br>";
+
+define("CON1", "ITI");
+const CON2 = "ITI";
+
+$m = 30;
+$n = 25;
+$result = $m + $n;
+
+if ($result > 50) {
+    echo "Accepted<br>";
+} else {
+    echo "Not accepted<br>";
 }
 
-// const school= "ITI";
-// echo school;
-// echo "<br>";
-// define("CAR","BMW");
-// echo CAR;
-// $m = 5;
-// $n = 9;
-// $result = $m + $n;
-// if( $result > 50){
-//     echo "Accepted";
-// }else{
-//     echo "Not Accepted";
-// }
+function anyToString(&$val)
+{
+    settype($val, "string");
+}
 
-// echo "<table border='1'>
-// <tr>
-//     <td>Salary Of Ahmed</td>
-//     <td>15000$</td>
-// </tr>
-// <tr>
-//     <td>Salary Of Salah</td>
-//     <td>15200$</td>
-// </tr>
-// <tr>
-//     <td>Salary Of Hosney</td>
-//     <td>14000$</td>
-// </tr>
-//     </table>";
-// $x = 651;
-// function anyToString($x){
-//        echo $x;
-// }
-// echo anyToString($x);
+$intVar = 55;
+echo gettype($intVar)."<br>";
+anyToString($intVar)."<br>";
+echo gettype($intVar)."<br>";
+
+echo "<table border='1'>
+        <tr>
+            <td>salary of mr a is </td>
+            <td>1000$</td>
+        </tr>
+        <tr>
+            <td>salary of mr b is </td>
+            <td>1200$</td>
+        </tr>
+        <tr>
+            <td>salary of mr c is </td>
+            <td>1400$</td>
+        </tr>
+            </table>";
+
 ?>
